@@ -7,6 +7,19 @@
 ## Name:Fidel Bello, Lucas Diaz, Robert Vanscoy, Fransisco Ortega, Mike Gordillo
 ## GitHub user name: Movie_Profile_App
 
+
+## User Story:
+
+As a User, I'd like to create a profile with a login.
+As a User, once I've created a profile I have access to a movies API that will allow me to search, add and review movies. I would also like for the app, to give me suggestions as to what to watch based on previous tastes and inquiries. As I watch, my profile will be updated.
+So that I may keep record of movies watched and ones I'd like to watch in the future.
+
+## Acceptance Criteria:
+
+Given[how things begin]
+When[action taken]
+Then[outcome of action]
+
 ## Table of contents:  
 * [Description](#description)
 * [Installation](#Installation)
