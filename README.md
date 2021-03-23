@@ -4,7 +4,7 @@
 ![video]()
 
         
-## Name:Fidel Bello, Lucas Diaz, Robert Vanscoy, Fransisco Ortega, Mike Gordillo
+## Name:Fidel Bello, Lucas Diaz, Robert Vanscoy, Francisco Ortega, Mike Gordillo
 ## GitHub user name: Movie_Profile_App
 
 
@@ -42,7 +42,7 @@ Then[outcome of action]
 ## Testing:
 * no tests
 ## Questions:
-* Contact Fidel Bello, Lucas Diaz, Robert Vanscoy, Fransisco Ortega, Mike Gordillo with any questions at mikegordillotattoo@gmail.com
+* Contact Fidel Bello, Lucas Diaz, Robert Vanscoy, Francisco Ortega, Mike Gordillo with any questions at mikegordillotattoo@gmail.com
 
 ![screenshot]()
 
