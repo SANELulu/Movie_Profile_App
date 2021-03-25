@@ -2,6 +2,7 @@ const { Model, DataTypes} = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection')
 
+
 class User extends Model {
     checkPw (loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
@@ -39,6 +40,21 @@ User.init({
             len: [8],
         },
     },
+    topGenres: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            isAlpha: true,
+        }
+    },
+    favDirectors: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            isAlphanumeric: true,
+        }
+    },
+
 },
 {
     hooks: {
