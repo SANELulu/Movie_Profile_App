@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/flatly/bootstrap.min.css" />
+</head>
+
+<body>
+
+
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h2>
+        <img src="../public/assets/mymdb.png" role="img" aria-label="logo" width="200" height="200"></img>
+        <a href="/">Movie App</a>
+      </h2>
+
+    <div class="container">
+    <br>
+    <h1>Trailer Finder</h1>
+    <br>
+    <form id="form">
+        <div class="form-group">
+        <input type="text" class="form-control" id="search">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger" value="Search">    
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="videos">
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../public/JS/youtube.js"></script>
