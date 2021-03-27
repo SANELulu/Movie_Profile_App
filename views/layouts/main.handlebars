@@ -19,13 +19,14 @@
         <a href="/">Movie App</a>
       </h1>
       <nav>
+        {{!-- {{logged_in}}
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a href="/profile">profile</a>
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+        <a href="/login">LOGIN!</a>
+        {{/if}} --}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
@@ -36,7 +37,7 @@
       
     </footer>
   </div>
-
+ {{!-- <script src="js/auth.js"></script> --}}
 </body>
 
 </html>
