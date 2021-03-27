@@ -14,8 +14,13 @@ const signupFormHandler = async (event) => {
             body: JSON.stringify({ name, email, password, topGenre }),
             headers: { 'Content-Type': 'application/json' },
           });
+
+          if(response.status !== 200){
+            console.log("error at response");
+          }
           return response;
     }
+      
     console.log("hitting form submission");
   };
   

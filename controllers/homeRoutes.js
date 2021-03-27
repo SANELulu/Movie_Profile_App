@@ -18,6 +18,10 @@ router.get( '/login', async (req, res)  => {
   
     res.render('login');
   });
-
+router.get('/profile', async (req, res) => {
+  res.render('profile', {
+    loggedIn: req.session.loggedIn
+  }); 
+});
 
 module.exports = router;
