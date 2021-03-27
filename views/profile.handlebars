@@ -3,22 +3,34 @@
 </div>
 <div class="row">
 {{!-- user --}}
-    <div class="col-4">
+    <div class="col-3">
         <a>Profile</a>
     </div>
 {{!-- watchlist --}}
-    <div class="col-4">
+    <div class="col-3">
         <a>Watchlist</a>
     </div>
 {{!-- reviews --}}
-    <div class="col-4">
+    <div class="col-3">
     <a>Reviews</a>
     </div>
-</div>
-{{!-- movie trailers for movies ive watched or are in my watchlist?? --}}
-<div class="row">
-    <div class="col-6">
-        <a>Movie Trailers</a>
+{{!-- trailers --}}
+    <div class="col-3">
+    <a>Trailers</a>
+    <form id="form">
+        <div class="form-group">
+        <input type="text" class="form-control" id="search">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger" value="Search">    
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="videos">
+
+            </div>
+        </div>
+    </div>
     </div>
 </div>
-<script src="js/auth.js"></script>
