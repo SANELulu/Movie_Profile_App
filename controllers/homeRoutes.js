@@ -9,13 +9,13 @@ router.get('/', (req, res) => {
 });
 
 router.get( '/login', async (req, res)  => {
-
+  debugger;
     // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
-      res.redirect('/profile');
-      return;
-    }
-  
+    
+    // if (req.session.logged_in) {
+    //   res.redirect('/profile');
+    //   return;
+    // }
     res.render('login');
   });
 router.get('/profile', async (req, res) => {
