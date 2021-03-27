@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const { sequelize } = require('../../models/user');
+const { route } = require('../homeRoutes');
 
 router.post('/login', async (req, res) => {
     try{
@@ -56,6 +58,10 @@ router.post('/signup', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+router.get('/profile', async (req, res) => {
+  
+})
 
   module.exports = router;
   
