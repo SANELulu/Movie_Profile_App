@@ -78,5 +78,5 @@ signupForm.addEventListener('submit',signupFormHandler)
 if(logoutForm){
 logoutForm.addEventListener('submit',logoutFormHandler)
 };
-    
+  
   
