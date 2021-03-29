@@ -21,6 +21,15 @@ const loginFormHandler = async (event) => {
 
         if(response.status !== 200){
           console.log(" wrong username or password please try again");
+
+          Toastify({
+            text: "Wrong Email or Password",
+            backgroundColor: "linear-gradient(to right, #ED3710, #7B35FF )",
+            className: "Error Toast",
+            gravity: "top",
+            position: "center"
+          }).showToast();
+
         }else{
         window.location.href = 'http://localhost:3001/profile';
         }
@@ -52,22 +61,24 @@ const signupFormHandler = async (event) => {
           
           if(response.status !== 200){
             console.log("error at response");
+
             Toastify({
               text: "Error on Signup",
               backgroundColor: "linear-gradient(to right, #ED3710, #7B35FF )",
-              className: "Sucessful Toast",
+              className: "Error Toast",
               gravity: "top",
               position: "center"
             }).showToast();
+
           }
           //if response.staus == 200 trigger success toast WIP 
           if(response.status == 200){
             console.log("hitting form submission");
            
             Toastify({
-              text: "Signup Sucessful",
+              text: "Signup Successful",
               backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-              className: "Sucessful Toast",
+              className: "Success Toast",
               gravity: "top",
               position: "center"
             }).showToast();
