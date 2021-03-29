@@ -4,6 +4,7 @@ const logoutForm = document.querySelector('#logout')
 
 
 
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -48,14 +49,31 @@ const signupFormHandler = async (event) => {
             body: JSON.stringify({ name, email, password, topGenre }),
             headers: { 'Content-Type': 'application/json' },
           });
-
+          
           if(response.status !== 200){
             console.log("error at response");
+            Toastify({
+              text: "Error on Signup",
+              backgroundColor: "linear-gradient(to right, #ED3710, #7B35FF )",
+              className: "Sucessful Toast",
+              gravity: "top",
+              position: "center"
+            }).showToast();
           }
-          //if response.staus == 200 trigger success toast WIP   
+          //if response.staus == 200 trigger success toast WIP 
+          if(response.status == 200){
+            console.log("hitting form submission");
+           
+            Toastify({
+              text: "Signup Sucessful",
+              backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+              className: "Sucessful Toast",
+              gravity: "top",
+              position: "center"
+            }).showToast();
+
+          }  
     }
-      
-    console.log("hitting form submission");
   };
 
   const logoutFormHandler = async (event) => { 
