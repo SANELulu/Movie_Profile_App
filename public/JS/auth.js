@@ -1,6 +1,8 @@
-const loginForm = document.querySelector('.login-form')
-const signupForm = document.querySelector('.signup-form')
-const logoutForm = document.querySelector('#logout')
+const loginForm = document.querySelector('.login-form');
+const signupForm = document.querySelector('.signup-form');
+const logoutForm = document.querySelector('#logout');
+//wip
+// const loginBtn = document.querySelector('#login-btn');
 
 
 
@@ -51,7 +53,6 @@ const signupFormHandler = async (event) => {
     const password = document.querySelector('#password-signup').value.trim();
     const topGenre = document.querySelector('#genre-signup').value.trim();
 
-   
     if (name && email && password && topGenre ) {
         const response = await fetch('/api/users/signup', {
             method: 'POST',
@@ -97,6 +98,14 @@ const signupFormHandler = async (event) => {
       }
     )
   };
+//login btn does not currently work 
+// const loginRedirect = async (event) => {
+//   () => {
+//     const response = await fetch('/api/users/login', {
+//       return res.redirect('/profile');
+//     });
+//   }
+// }
   
 if(loginForm){
 loginForm.addEventListener('submit',loginFormHandler)
@@ -107,5 +116,9 @@ signupForm.addEventListener('submit',signupFormHandler)
 if(logoutForm){
 logoutForm.addEventListener('submit',logoutFormHandler)
 };
+//wip
+// if(loginBtn){
+//   loginBtn.addEventListener('submit', loginRedirect)
+// }
     
   
