@@ -1,4 +1,3 @@
-const router = require("express").Router();
 
 const youtubeSearch = async () => {
   var video = "";
@@ -7,8 +6,11 @@ const youtubeSearch = async () => {
     event.preventDefault();
     var search = $("#search").val();
     console.log(search)
+    movieAPIcall(search)
     // videoSearch(API_KEY, search, 1);
   });
+
+  
   // function videoSearch(API_KEY, search, maxResults) {
   //   $("#videos").empty();
   //   $.get(
@@ -33,5 +35,14 @@ const youtubeSearch = async () => {
   //   );
   // }
 };
+const movieAPIcall=(search)=>{
+  $.ajax({
+    method: 'POST',
+    data: search,
+    url: '/api/movie/'
+  }).then(res => {
+    console.log(res)
+  })
+}
 
-module.exports = router;
+youtubeSearch();
