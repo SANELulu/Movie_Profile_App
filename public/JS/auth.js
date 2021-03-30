@@ -1,7 +1,7 @@
 const loginForm = document.querySelector('.login-form');
 const signupForm = document.querySelector('.signup-form');
 const logoutForm = document.querySelector('#logout');
-
+. 
 //wip
 // const loginBtn = document.querySelector('#login-btn');
 
