@@ -30,7 +30,13 @@
                 border: 1px solid blue;
                 cursor: pointer;
                 font-size: 2em;
+                color: pink;
+            }
+
+            .active {
                 color: yellow;
+                border: rgb(0, 255, 200);
+                cursor: pointer;
             }
 
             .rating-item::before {
@@ -52,7 +58,7 @@
 
         <ul class="rating">
             <li class="rating-item" data-rate="1"></li>
-            <li class="rating-item active" data-rate="2"></li>
+            <li class="rating-item" data-rate="2"></li>
             <li class="rating-item" data-rate="3"></li>
             <li class="rating-item" data-rate="4"></li>
             <li class="rating-item" data-rate="5"></li>
@@ -62,7 +68,13 @@
             const items = container.querySelectorAll('.rating-item')
             container.onclick = e => {
                 const elClass = e.target.classList;
-                if (!elClass.contains('active')) {
+                if (elClass.contains('active')) {
+                    items.forEach(
+                        item => item.classList.remove('active')
+                    );
+                    console.log(e.target.getAttribute("data-rate"));
+                }
+                else {
                     items.forEach(
                         item => item.classList.remove('active')
                     );
@@ -70,6 +82,16 @@
                     elClass.add('active');
                 }
             };
+
+
+
+
+
+
+
+
+
+
         </script>
 
 
