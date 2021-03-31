@@ -12,7 +12,6 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
   
- 
   if (email && password) {
       const response = await fetch('/api/users/login', {
           method: 'POST',
@@ -34,10 +33,7 @@ const loginFormHandler = async (event) => {
         }else{
         window.location.href = 'http://localhost:3001/profile';
         }
-        
-        //if response.staus == 200 trigger success toast WIP 
-        // return response;
-        
+         
   }
 }
 
