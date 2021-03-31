@@ -4,8 +4,6 @@ const logoutForm = document.querySelector('#logout');
 const loginBtn = document.querySelector('#login-btn');
 
 
-
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -36,10 +34,6 @@ const loginFormHandler = async (event) => {
          
   }
 }
-
-
-
-
 const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -82,8 +76,7 @@ const signupFormHandler = async (event) => {
           }  
     }
   };
-
-  const logoutFormHandler = async () => { 
+const logoutFormHandler = async () => { 
   
     return await fetch('api/users/logout').then(
       ()=> {
@@ -92,7 +85,6 @@ const signupFormHandler = async (event) => {
       }
     )
   };
-
 const loginRedirect = async () => {
   window.location.href = '/login'
 }
@@ -110,4 +102,38 @@ if(loginBtn){
   loginBtn.addEventListener('click', loginRedirect)
 }
     
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
