@@ -1,9 +1,7 @@
 const loginForm = document.querySelector('.login-form');
 const signupForm = document.querySelector('.signup-form');
 const logoutForm = document.querySelector('#logout');
-
-//wip
-// const loginBtn = document.querySelector('#login-btn');
+const loginBtn = document.querySelector('#login-btn');
 
 
 
@@ -14,7 +12,6 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
   
- 
   if (email && password) {
       const response = await fetch('/api/users/login', {
           method: 'POST',
@@ -36,16 +33,9 @@ const loginFormHandler = async (event) => {
         }else{
         window.location.href = 'http://localhost:3001/profile';
         }
-        
-        //if response.staus == 200 trigger success toast WIP 
-        // return response;
-        
+         
   }
 }
-
-
-
-
 const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -88,25 +78,18 @@ const signupFormHandler = async (event) => {
           }  
     }
   };
-
-  const logoutFormHandler = async (event) => { 
-    // event.preventDefault();
-   
+const logoutFormHandler = async () => { 
+  
     return await fetch('api/users/logout').then(
       ()=> {
-        window.location.href = 'http://localhost:3001/login'
+        window.location.href = '/login'
         console.log("redirecting to login screen");
       }
     )
   };
-//login btn does not currently work 
-// const loginRedirect = async (event) => {
-//   () => {
-//     const response = await fetch('/api/users/login', {
-//       return res.redirect('/profile');
-//     });
-//   }
-// }
+const loginRedirect = async () => {
+  window.location.href = '/login'
+}
   
 if(loginForm){
 loginForm.addEventListener('submit',loginFormHandler)
@@ -117,10 +100,9 @@ signupForm.addEventListener('submit',signupFormHandler)
 if(logoutForm){
 logoutForm.addEventListener('submit',logoutFormHandler)
 };
-//wip
-// if(loginBtn){
-//   loginBtn.addEventListener('submit', loginRedirect)
-// }
+if(loginBtn){
+  loginBtn.addEventListener('click', loginRedirect)
+}
     
 
 
