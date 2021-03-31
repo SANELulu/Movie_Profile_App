@@ -4,6 +4,8 @@ const logoutForm = document.querySelector('#logout');
 const loginBtn = document.querySelector('#login-btn');
 
 
+
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
