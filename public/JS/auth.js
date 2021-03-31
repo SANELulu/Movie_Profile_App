@@ -4,8 +4,6 @@ const logoutForm = document.querySelector('#logout');
 const loginBtn = document.querySelector('#login-btn');
 
 
-
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -90,7 +88,6 @@ const logoutFormHandler = async () => {
 const loginRedirect = async () => {
   window.location.href = '/login'
 }
-  
 if(loginForm){
 loginForm.addEventListener('submit',loginFormHandler)
 };
