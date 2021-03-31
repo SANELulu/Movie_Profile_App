@@ -2,7 +2,12 @@
     <button onclick="logoutFormHandler()" class="no-button" id="logout">logout</button>
 </div>
 <div class="row">
+
+    <h2>Welcome {{name}}</h2>
+    <p>Do you like : <span id="genreValue">{{topGenre}}</span> </p>
+
     {{!-- user --}}
+
     <div class="col-3">
 
         <a>Profile</a>
@@ -85,30 +90,28 @@
                     elClass.add('active');
                 }
             };
-
         </script>
     </div>
+</div>
+<br>
+<br>
     {{!-- trailers --}}
     <div class="col-3">
 
         <a>Trailers</a>
         <form id="form">
             <div class="form-group">
-                <input type="text" class="form-control" id="search">
+            <input type="text" class="form-control" id="search">
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-danger" value="Search">
+                <input type="submit" class="btn btn-danger" value="Search">    
             </div>
         </form>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="videos">
-                    {{!-- insert iframe code here --}}
-
-
+        <div class="col-md-auto">
+            <div class="col-md-auto">
+                <div class= 'align-center' id="videos">
                 </div>
-
             </div>
-        </div>
     </div>
-</div>
+
+   
