@@ -2,7 +2,12 @@
     <button onclick="logoutFormHandler()" class="no-button" id="logout">logout</button>
 </div>
 <div class="row">
+
+    <h2>Welcome {{name}}</h2>
+    <p>Do you like : <span id="genreValue">{{topGenre}}</span> </p>
+
     {{!-- user --}}
+
     <div class="col-3">
 
         <a>Profile</a>
@@ -114,14 +119,6 @@
                 <div class= 'align-center' id="videos">
                 </div>
             </div>
-        </div>
     </div>
-    <div> 
-        <a>Favorite Movie</a>
-        <ul>The Hulk</ul>
-        <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
-        <button>Search</button><button>save</button>
-    </div>
-</div>
-<script src="../public/JS/script.js"></script>
-</div>
+
+   
