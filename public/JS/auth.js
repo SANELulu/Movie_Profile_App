@@ -62,7 +62,7 @@ const signupFormHandler = async (event) => {
             }).showToast();
 
           }
-          //if response.staus == 200 trigger success toast WIP 
+          
           if(response.status == 200){
             console.log("hitting form submission");
            

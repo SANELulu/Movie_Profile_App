@@ -73,14 +73,13 @@ router.get('/logout', (req, res) => {
 
 
 
-// get fav movie genre
-router.get('/profile', async (req,res)=>{
-  const userData = await User.findOne({ where: { id: req.body }});
-  // console.log(userData);
-  console.log(userData)
-  return userData.json()
-})
-
+// get fav movie genre wip lucas 
+// router.get('/profile', async (req,res)=>{
+//   const userData = await User.findOne({ where: { id: req.body }});
+//   // console.log(userData);
+//   console.log(userData)
+//   return userData.json()
+// })
 
 
 router.post('/signup', async (req, res) => {
