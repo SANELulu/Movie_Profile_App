@@ -23,48 +23,6 @@
 
 <div id="rater" class="col-3">
     <a>Reviews/Ratings</a>
-
-    <style>
-        .rating {
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-
-        .rating li {
-            list-style-type: none;
-        }
-
-        .rating-item {
-            border: 1px solid blue;
-            cursor: pointer;
-            font-size: 2em;
-            color: pink;
-        }
-
-        .active {
-            color: yellow;
-            border: 1px solid rgb(0, 255, 200);
-            cursor: pointer;
-        }
-
-        .rating-item::before {
-            content: "\2605";
-        }
-
-        .rating-item.active~.rating-item::before {
-            content: "\2605";
-        }
-
-        .rating:hover .rating-item::before {
-            content: "\2605";
-        }
-
-        .rating-item:hover~.rating-item::before {
-            content: "\2605";
-        }
-    </style>
-
     <ul class="rating">
         <li id="star" class="rating-item" data-rate="1"></li>
         <li id="star" class="rating-item" data-rate="2"></li>
@@ -94,6 +52,8 @@
             }
         };
     </script>
+
+
 </div>
 </div>
 <br>
