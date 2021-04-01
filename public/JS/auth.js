@@ -4,6 +4,7 @@ const logoutForm = document.querySelector('#logout');
 const loginBtn = document.querySelector('#login-btn');
 
 
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -29,7 +30,7 @@ const loginFormHandler = async (event) => {
           }).showToast();
 
         }else{
-        window.location.href = 'http://localhost:3001/profile';
+        window.location.href = '/profile';
         }
          
   }
@@ -86,8 +87,30 @@ const logoutFormHandler = async () => {
     )
   };
 const loginRedirect = async () => {
-  window.location.href = '/login'
+  // if(req.session.logged_in){
+  //   window.location.href = '/profile'
+  // }
+  // else(
+    window.location.href = '/login'
+    // )
+  
 }
+
+
+
+
+
+
+// const getGenre = async () => {
+//   const response = await fetch('/api/users/profile', {
+//     method: "GET"
+//   }
+//   ).then(
+//     console.log(response)
+//   )
+//   };
+
+
 if(loginForm){
 loginForm.addEventListener('submit',loginFormHandler)
 };
