@@ -2,7 +2,12 @@
     <button onclick="logoutFormHandler()" class="no-button" id="logout">logout</button>
 </div>
 <div class="row">
+
+    <h2>Welcome {{name}}</h2>
+    <p>Do you like : <span id="genreValue">{{topGenre}}</span> </p>
+
     {{!-- user --}}
+
     <div class="col-3">
 
         <a>Profile</a>
@@ -36,7 +41,7 @@
 
             .active {
                 color: yellow;
-                border: rgb(0, 255, 200);
+                border: 1px solid rgb(0, 255, 200);
                 cursor: pointer;
             }
 
@@ -118,4 +123,5 @@
 </div>
 </div>
 
+</div>
 </div>

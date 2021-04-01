@@ -21,7 +21,7 @@ router.post('/login', async (req, res) => {
 
             res 
                 .status(400)
-                // .json({ message: "Incorrect email or password, please try again."});
+                .json({ message: "Incorrect email or password, please try again."});
                 return;
         }
 
@@ -40,7 +40,7 @@ router.post('/login', async (req, res) => {
 
             res
                 .status(400)
-                // .json({message: 'Incorrect email or password, please try again'});
+                .json({message: 'Incorrect email or password, please try again'});
                 return;
         }
         req.session.save(() => {
@@ -57,6 +57,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+
 router.get('/logout', (req, res) => {
 
     if (req.session.logged_in) {
@@ -71,9 +73,6 @@ router.get('/logout', (req, res) => {
 
 
 
-
-
-
 // get fav movie genre
 router.get('/profile', async (req,res)=>{
   const userData = await User.findOne({ where: { id: req.body }});
@@ -81,10 +80,6 @@ router.get('/profile', async (req,res)=>{
   console.log(userData)
   return userData.json()
 })
-
-
-
-
 
 
 
