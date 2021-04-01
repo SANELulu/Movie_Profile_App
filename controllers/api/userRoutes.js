@@ -57,6 +57,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+
 router.get('/logout', (req, res) => {
 
     if (req.session.logged_in) {
@@ -69,8 +71,18 @@ router.get('/logout', (req, res) => {
 
 });
 
-router.post('/signup', async (req, res) => {
 
+
+// get fav movie genre wip lucas 
+// router.get('/profile', async (req,res)=>{
+//   const userData = await User.findOne({ where: { id: req.body }});
+//   // console.log(userData);
+//   console.log(userData)
+//   return userData.json()
+// })
+
+
+router.post('/signup', async (req, res) => {
   try {
     const newUser = await User.create(req.body);
     req.session.save(() => {
@@ -82,7 +94,6 @@ router.post('/signup', async (req, res) => {
   }
 
 });
-
 
   module.exports = router;
   

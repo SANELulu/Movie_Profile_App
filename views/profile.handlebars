@@ -1,22 +1,17 @@
 <div class="row">
-    <button onclick="logoutFormHandler()" class="no-button" id="logout">logout</button>
+    <button onclick="logoutFormHandler()" class="no-button  btn-outline-secondary btn-lg" id="logout">logout</button>
 </div>
-<div class="row">
+<div class="row mt-5">
 
-    <h2>Welcome {{name}}</h2>
-    <p>Do you like : <span id="genreValue">{{topGenre}}</span> </p>
-
-    {{!-- user --}}
-
-    <div class="col-3">
-
-        <a>Profile</a>
-
+    <div class="card border-light mb-3" style="max-width: 20rem;">
+        <div class="card-header text-center">
+            <h4>Welcome, {{name}}</h4>
+        </div>
+        <div class="card-body">
+            <p>Favorite Genre : <span id="genreValue">{{topGenre}}</span> </p>
+        </div>
     </div>
-    {{!-- watchlist --}}
-    <div class="col-3">
-        <a>Watchlist</a>
-    </div>
+<<<<<<< HEAD
     {{!-- reviews --}}
     <div id="rater" class="col-3">
         <a>Reviews/Ratings</a>
@@ -43,54 +38,92 @@
                 border: 1px solid rgb(0, 255, 200);
                 cursor: pointer;
             }
+=======
+</div>
+>>>>>>> a70ae4d458b9553cc9e734e5af7a5065c8c1b8ce
 
-            .rating-item::before {
-                content: "\2605";
+
+
+{{!-- watchlist --}}
+<div class="col-3">
+    <a>Watchlist</a>
+</div>
+{{!-- reviews --}}
+
+<div id="rater" class="col-3">
+    <a>Reviews/Ratings</a>
+
+    <style>
+        .rating {
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        .rating li {
+            list-style-type: none;
+        }
+
+        .rating-item {
+            border: 1px solid blue;
+            cursor: pointer;
+            font-size: 2em;
+            color: pink;
+        }
+
+        .active {
+            color: yellow;
+            border: 1px solid rgb(0, 255, 200);
+            cursor: pointer;
+        }
+
+        .rating-item::before {
+            content: "\2605";
+        }
+
+        .rating-item.active~.rating-item::before {
+            content: "\2605";
+        }
+
+        .rating:hover .rating-item::before {
+            content: "\2605";
+        }
+
+        .rating-item:hover~.rating-item::before {
+            content: "\2605";
+        }
+    </style>
+
+    <ul class="rating">
+        <li id="star" class="rating-item" data-rate="1"></li>
+        <li id="star" class="rating-item" data-rate="2"></li>
+        <li id="star" class="rating-item" data-rate="3"></li>
+        <li id="star" class="rating-item" data-rate="4"></li>
+        <li id="star" class="rating-item" data-rate="5"></li>
+    </ul>
+
+
+    <script>
+        const container = document.querySelector('.rating');
+        const items = container.querySelectorAll('.rating-item')
+        container.onclick = e => {
+            const elClass = e.target.classList;
+            if (elClass.contains('active')) {
+                items.forEach(
+                    item => item.classList.remove('active')
+                );
+                console.log(e.target.getAttribute("data-rate"));
             }
-
-            .rating-item.active~.rating-item::before {
-                content: "\2605";
+            else {
+                items.forEach(
+                    item => item.classList.remove('active')
+                );
+                console.log(e.target.getAttribute("data-rate"));
+                elClass.add('active');
             }
-
-            .rating:hover .rating-item::before {
-                content: "\2605";
-            }
-
-            .rating-item:hover~.rating-item::before {
-                content: "\2605";
-            }
-        </style>
-
-        <ul class="rating">
-            <li id="star" class="rating-item" data-rate="1"></li>
-            <li id="star" class="rating-item" data-rate="2"></li>
-            <li id="star" class="rating-item" data-rate="3"></li>
-            <li id="star" class="rating-item" data-rate="4"></li>
-            <li id="star" class="rating-item" data-rate="5"></li>
-        </ul>
-
-
-        <script>
-            const container = document.querySelector('.rating');
-            const items = container.querySelectorAll('.rating-item')
-            container.onclick = e => {
-                const elClass = e.target.classList;
-                if (elClass.contains('active')) {
-                    items.forEach(
-                        item => item.classList.remove('active')
-                    );
-                    console.log(e.target.getAttribute("data-rate"));
-                }
-                else {
-                    items.forEach(
-                        item => item.classList.remove('active')
-                    );
-                    console.log(e.target.getAttribute("data-rate"));
-                    elClass.add('active');
-                }
-            };
-        </script>
-    </div>
+        };
+    </script>
+</div>
 </div>
 <br>
 <br>
@@ -111,4 +144,20 @@
             <div class='align-center' id="videos">
             </div>
         </div>
+<<<<<<< HEAD
     </div>
+=======
+    </div>
+</div>
+{{!-- fav movie --}}
+<div>
+    <a>Favorite Movie</a>
+    <ul>The Hulk</ul>
+    <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
+    <button>Search</button><button>save</button>
+</div>
+</div>
+
+</div>
+</div>
+>>>>>>> a70ae4d458b9553cc9e734e5af7a5065c8c1b8ce
