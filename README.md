@@ -15,10 +15,13 @@ As a User, once I've created a profile I have access to a movies API that will a
 So that I may keep record of movies watched and ones I'd like to watch in the future.
 
 ## Acceptance Criteria:
+When wanting to organize your favorite movies list, look up a trailer of your favorite movie, or one you haven't yet seen, the app will provide an easy experience for the user by helping them store their picks in a database, that will later be retreived when logged in and display in the user's profile.
 
-Given[how things begin]
-When[action taken]
-Then[outcome of action]
+A movie fanatatic that wants to organize their favorite movie list, or perhaps would like to create a "to watch in the future list" can create a profile, in which their favorite movies picks will be stored. Fans can also watch trailers and rate their choices.
+
+Search for movies, watch trailers and store your ratings and picks on your profile.
+
+When the user is logged in, the app will retrieve the individual user's data and display on profile.
 
 ## Table of contents:  
 * [Description](#description)
