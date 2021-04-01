@@ -1,5 +1,5 @@
-const movieSearch = '';
-const APIKEY = 'acc9f3c5c9182124f176740523389662';
+
+
 
 
 const searchMovie = document.getElementById('movieSearch');
@@ -36,3 +36,12 @@ if (searchMovie){
 
 
 
+const addFavMovie = async (event) => {
+const response = await fetch('/api/users/addfav', {
+        method: 'POST',
+        body: JSON.stringify({movie_name}),
+        headers: { 'Content-Type': 'application/json' },
+});
+}
+
+// addFavMovie();
