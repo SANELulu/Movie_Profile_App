@@ -63,7 +63,7 @@ if (genreNumber == 27){
 
 
             async function getPoster(){
-                let res = await fetch('http://omdbapi.com/?t='+  dataArray[0]  +'&apikey=43a1230f');
+                let res = await fetch('https://omdbapi.com/?t='+  dataArray[0]  +'&apikey=43a1230f');
                 let omdbData = await res.json()
                 return omdbData;
             }
@@ -101,7 +101,7 @@ if (genreNumber == 27){
 
 
                 async function getPoster2(){
-                    let res = await fetch('http://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
+                    let res = await fetch('https://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
                     let omdbData = await res.json()
                     return omdbData;
                 }
@@ -138,7 +138,7 @@ if (genreNumber == 27){
 
 
                     async function getPoster3(){
-                        let res = await fetch('http://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
+                        let res = await fetch('https://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
                         let omdbData = await res.json()
                         return omdbData;
                     }
@@ -186,7 +186,7 @@ if (genreNumber == 18){
 
 
             async function getPoster(){
-                let res = await fetch('http://omdbapi.com/?t='+  dataArray[0]  +'&apikey=43a1230f');
+                let res = await fetch('https://omdbapi.com/?t='+  dataArray[0]  +'&apikey=43a1230f');
                 let omdbData = await res.json()
                 return omdbData;
             }
@@ -221,7 +221,7 @@ if (genreNumber == 18){
 
 
                 async function getPoster2(){
-                    let res = await fetch('http://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
+                    let res = await fetch('https://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
                     let omdbData = await res.json()
                     return omdbData;
                 }
@@ -257,7 +257,7 @@ if (genreNumber == 18){
                 
 
                     async function getPoster3(){
-                        let res = await fetch('http://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
+                        let res = await fetch('https://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
                         let omdbData = await res.json()
                         return omdbData;
                     }
@@ -306,7 +306,7 @@ if (genreNumber == 18){
         
         
                     async function getPoster(){
-                        let res = await fetch('http://omdbapi.com/?t='+  dataArray[0]  +'&apikey=43a1230f');
+                        let res = await fetch('https://omdbapi.com/?t='+  dataArray[0]  +'&apikey=43a1230f');
                         let omdbData = await res.json()
                         return omdbData;
                     }
@@ -343,7 +343,7 @@ if (genreNumber == 18){
         
         
                         async function getPoster2(){
-                            let res = await fetch('http://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
+                            let res = await fetch('https://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
                             let omdbData = await res.json()
                             return omdbData;
                         }
@@ -377,7 +377,7 @@ if (genreNumber == 18){
                 
         
                             async function getPoster3(){
-                                let res = await fetch('http://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
+                                let res = await fetch('https://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
                                 let omdbData = await res.json()
                                 return omdbData;
                             }
@@ -424,7 +424,7 @@ if (genreNumber == 18){
                       
                 
                             async function getPoster(){
-                                let res = await fetch('http://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
+                                let res = await fetch('https://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
                                 let omdbData = await res.json()
                                 return omdbData;
                             }
@@ -458,7 +458,7 @@ if (genreNumber == 18){
                                
                 
                                 async function getPoster2(){
-                                    let res = await fetch('http://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
+                                    let res = await fetch('https://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
                                     let omdbData = await res.json()
                                     return omdbData;
                                 }
@@ -490,7 +490,7 @@ if (genreNumber == 18){
                                     }
                              
                                     async function getPoster3(){
-                                        let res = await fetch('http://omdbapi.com/?t='+  dataArray[3]  +'&apikey=43a1230f');
+                                        let res = await fetch('https://omdbapi.com/?t='+  dataArray[3]  +'&apikey=43a1230f');
                                         let omdbData = await res.json()
                                         return omdbData;
                                     }
@@ -536,7 +536,7 @@ if (genreNumber == 18){
                               
                         
                                     async function getPoster(){
-                                        let res = await fetch('http://omdbapi.com/?t='+  dataArray[0]  +'&apikey=43a1230f');
+                                        let res = await fetch('https://omdbapi.com/?t='+  dataArray[0]  +'&apikey=43a1230f');
                                         let omdbData = await res.json()
                                         return omdbData;
                                     }
@@ -571,7 +571,7 @@ if (genreNumber == 18){
                                         }
               
                                         async function getPoster2(){
-                                            let res = await fetch('http://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
+                                            let res = await fetch('https://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
                                             let omdbData = await res.json()
                                             return omdbData;
                                         }
@@ -604,7 +604,7 @@ if (genreNumber == 18){
                                          
                         
                                             async function getPoster3(){
-                                                let res = await fetch('http://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
+                                                let res = await fetch('https://omdbapi.com/?t='+  dataArray[2]  +'&apikey=43a1230f');
                                                 let omdbData = await res.json()
                                                 return omdbData;
                                             }
