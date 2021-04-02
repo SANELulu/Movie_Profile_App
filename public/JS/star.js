@@ -1,17 +1,17 @@
 
 
-const container = document.querySelector('.rating');
-const items = container.querySelectorAll('.rating-item')
-container.onclick = e => {
+const rating = document.querySelector('.rating');
+const ratingItems = container.querySelectorAll('.rating-item')
+rating.onclick = e => {
     const elClass = e.target.classList;
     if (elClass.contains('active')) {
-        items.forEach(
+        ratingItems.forEach(
             item => item.classList.remove('active')
         );
         console.log(e.target.getAttribute("data-rate"));
     }
     else {
-        items.forEach(
+        ratingItems.forEach(
             item => item.classList.remove('active')
         );
         console.log(e.target.getAttribute("data-rate"));
