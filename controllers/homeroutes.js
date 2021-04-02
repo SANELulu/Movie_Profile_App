@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
-
+console.log("homeRoutes.js hitting")
 router.get('/', (req, res) => {
     res.render('homepage', {
        
