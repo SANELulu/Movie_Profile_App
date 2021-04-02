@@ -1,7 +1,3 @@
-
-
-
-
 const searchMovie = document.getElementById('movieSearch');
 const saveMovie = document.getElementById('saveMovie');
 const movieList = document.getElementById('movieList');

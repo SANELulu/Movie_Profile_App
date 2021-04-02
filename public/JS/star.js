@@ -1,5 +1,3 @@
-
-
 const container = document.querySelector('.rating');
 const items = container.querySelectorAll('.rating-item')
 container.onclick = e => {
