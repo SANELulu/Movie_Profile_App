@@ -51,7 +51,6 @@ User.init({
             isAlphanumeric: true,
         }
     },
-
 },
 {
     hooks: {
