@@ -195,11 +195,15 @@
     </div>
     {{!-- fav movie --}}
     <div>
-        <a>Favorite Movie</a>
-        <ul>The Hulk</ul>
+        <a>Favorite Movies</a>
+        <ul>
+           {{#each favmovies as |favmovie|}}
+           <li>{{favmovie.movie_name}}</li>
+         {{/each}}</ul>
         <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
         <button id="movieSearch">Search</button>
-         <button id="1star" class="rating-item" data-rate="1"></button>
+         <button id="Onestar" class="rating-item" data-rate="1"></button>
+         <ul id="movieList"></ul>
     </div>
 </div>
 
