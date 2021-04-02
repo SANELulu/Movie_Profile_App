@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const { sequelize } = require('../../models/user');
-const { route } = require('../homeRoutes');
+const { route } = require('../homeroutes');
 
 router.post('/login', async (req, res) => {
 
