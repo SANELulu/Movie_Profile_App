@@ -26,13 +26,20 @@ const searchMovieFunction = async (e)=> {
 const movieSave = async (e) => {
     e.preventDefault()
     const movieInput = document.getElementById('movieSearchinput').value
-    const result = await fetch()
+    const result = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&query=${movieInput}&limit=1`, {
+        method: 'GET',
+    })
+    const resultJson = await result.json()
+    const movieResult = resultJson.results[0];
+    console.log(resultJson.results[0].original_title);
+   movieListItem.textContent = movieResult.original_title
+   movieList.append(movieListItem);
+   
 }
 
-if (searchMovie){
 
+    saveMovie.addEventListener('click', movieSave);
     searchMovie.addEventListener('click', searchMovieFunction)
-} 
 
 
 

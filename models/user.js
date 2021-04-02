@@ -51,7 +51,14 @@ User.init({
             isAlphanumeric: true,
         }
     },
-
+    favoriteMovie: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        references: {
+            model: 'favMovie',
+            key: 'movie_name'
+        }
+},
 },
 {
     hooks: {
