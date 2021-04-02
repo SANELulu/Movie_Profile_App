@@ -287,6 +287,12 @@ if (genreNumber == 18){
                 let descriptionArray = []
 
                 let dataArray = []
+
+                for (var i = 0; i < dataVariable.length-17; i++) {
+                    dataArray.push(dataVariable[i].original_title)
+                    descriptionArray.push(dataVariable[i].overview)
+
+                }
                 document.getElementById('movieTitle1').innerHTML= (dataArray[0]);
                 document.getElementById('movieTitle2').innerHTML= (dataArray[1]);
                 document.getElementById('movieTitle3').innerHTML= (dataArray[2]);
@@ -296,11 +302,7 @@ if (genreNumber == 18){
                 document.getElementById('movieDescription3').innerHTML= (descriptionArray[2]);
 
                 
-                for (var i = 0; i < dataVariable.length-17; i++) {
-                    dataArray.push(dataVariable[i].original_title)
-                    descriptionArray.push(dataVariable[i].overview)
-
-                }
+           
         
         
                     async function getPoster(){
