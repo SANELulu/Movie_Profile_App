@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 console.log("homeRoutes.js hitting")
 router.get('/', (req, res) => {
     res.render('homepage', {
-       
+        loggedIn: req.session.loggedIn
     })
 });
 
