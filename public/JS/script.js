@@ -2,23 +2,22 @@
 
 
 const MOVIEAPI_KEY = 'acc9f3c5c9182124f176740523389662' 
-
 const searchMovie = document.getElementById('movieSearch');
 //const saveMovie = document.getElementById('saveMovie');
 const movieList = document.getElementById('movieList');
-
+let movieName;
 
 const searchMovieFunction = async (e)=> {
-   //e.preventDefault()
-    console.log('aaaaaa')
+   e.preventDefault()
     const movieInput= document.getElementById('favmovieSearch').value 
     const result = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${MOVIEAPI_KEY}&query=${movieInput}&limit=1`, {
         method: 'GET'
     })
     const resultJson = await result.json()
     const movieResult = resultJson.results[0];
-    console.log(resultJson.results[0].original_title);
+    console.log(resultJson.results[0]);
    const movieListItem =  document.createElement('li')
+   movieName = movieResult.original_title
    movieListItem.textContent = movieResult.original_title
    movieList.append(movieListItem);
    
@@ -47,13 +46,16 @@ const movieSave = async (e) => {
 const addFavMovie = async (event) => {
 const response = await fetch('/api/users/addfav', {
         method: 'POST',
-        body: JSON.stringify({movie_name}),
+        body: JSON.stringify({movieName}),
         headers: { 'Content-Type': 'application/json' },
 });
+    if(response.status === 200){
+        console.log('added')
+    } else console.log('failed')
     
 }
 if (searchMovie){searchMovie.addEventListener('click', searchMovieFunction)}
-const oneStar = document.getElementById('1star')
+const oneStar = document.getElementById('Onestar')
 if (oneStar){oneStar.addEventListener('click', addFavMovie)}
 // addFavMovie();
 
