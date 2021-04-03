@@ -49,7 +49,7 @@ When the user is logged in, the app will retrieve the individual user's data.
 
 ![screenshot](/public/assets/TheAppProject2.png)
 ![screenshot](/public/assets/TheProject2.png)
-![screenshot](/public/assets/theProject(2).png)
+![screenshot](/public/assets/Screen.png)
 
 
 
