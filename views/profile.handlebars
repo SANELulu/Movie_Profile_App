@@ -1,111 +1,109 @@
-
-
-
-
-    {{!-- <h2>Welcome {{name}}</h2>
-    <p>Do you like : <span id="genreValue">{{topGenre}}</span> </p> --}}
+{{!-- <h2>Welcome {{name}}</h2>
+<p>Do you like : <span id="genreValue">{{topGenre}}</span> </p> --}}
 <nav class="navbar navbar-dark bg-dark sticky-top">
-  <span class="navbar-brand mb-0 h1">Welcome, <span class="text-info">{{name}}</span>. Your favorite Genre is : <span class="text-primary" id="genreValue">{{topGenre}}</span></span>
-  <button onclick="logoutFormHandler()" class="no-button  btn-outline-secondary btn-lg" id="logout">logout</button>
+    <span class="navbar-brand mb-0 h1">Welcome, <span class="text-info">{{name}}</span>. Your favorite Genre is : <span
+            class="text-primary" id="genreValue">{{topGenre}}</span></span>
+    <button onclick="logoutFormHandler()" class="no-button  btn-outline-secondary btn-lg" id="logout">logout</button>
 </nav>
 
 
- <div class="pt-5 pb-5">
-        <h2 class="text-center">Check Out These Top 3 Movies from the <span class="text-primary" id="genreValue">{{topGenre}}</span> genre!</h2>
+<div class="pt-5 pb-5">
+    <h2 class="text-center">Check Out These Top 3 Movies from the <span class="text-primary"
+            id="genreValue">{{topGenre}}</span> genre!</h2>
 
- </div>
-    
-    <div class="card-columns col d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top img-fluid"src="" alt="1st movie" id="movie1">
-                <div class="card-body">
-                    <h5 class = "text-center" id="movieTitle1"></h5>
-                    <p class="card-text text-success" id="movieDescription1"></p>
-                </div>
+</div>
+
+<div class="card-columns col d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top img-fluid" src="" alt="1st movie" id="movie1">
+        <div class="card-body">
+            <h5 class="text-center" id="movieTitle1"></h5>
+            <p class="card-text text-success" id="movieDescription1"></p>
         </div>
-
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top img-fluid" src="" alt="1st movie" id="movie2">
-                <div class="card-body">
-                    <h5 class = "text-center" id="movieTitle2"></h5>
-                    <p class="card-text text-success" id="movieDescription2"></p>
-                </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top img-fluid" src="" alt="1st movie" id="movie3">
-                <div class="card-body">
-                    <h5 class = "text-center" id="movieTitle3"></h5>
-                    <p class="card-text text-success" id="movieDescription3"></p>
-                </div>
-        </div>
-
-
     </div>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top img-fluid" src="" alt="1st movie" id="movie2">
+        <div class="card-body">
+            <h5 class="text-center" id="movieTitle2"></h5>
+            <p class="card-text text-success" id="movieDescription2"></p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top img-fluid" src="" alt="1st movie" id="movie3">
+        <div class="card-body">
+            <h5 class="text-center" id="movieTitle3"></h5>
+            <p class="card-text text-success" id="movieDescription3"></p>
+        </div>
+    </div>
+
+
+</div>
 
 <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="" alt="">
-  
-                    <div class="card-body">
-                        <h5 class="card-title">Favorite Movies</h5>
-                        
-                        <ul>
-                            {{#each favmovies as |favmovie|}}
-                            <li>{{favmovie.movie_name}}</li>
-                            <img src={{favmovie.movie_url}}>
-                            {{/each}}
-                        </ul>
-                            <form id="form">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="btn btn-danger" id="movieSearch">Search</button>
-                                        <button id="Onestar" class="rating-item btn-danger float-right" data-rate="1"></button>
-                                    </div>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="" alt="">
 
-                                    <div class='align-center' id="videos">
+                <div class="card-body">
+                    <h5 class="card-title">Favorite Movies</h5>
 
-                                    </div>
+                    <ul>
+                        {{#each favmovies as |favmovie|}}
+                        <li>{{favmovie.movie_name}}</li>
+                        <img src={{favmovie.movie_url}}>
+                        {{/each}}
+                    </ul>
+                    <form id="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-danger" id="movieSearch">Search</button>
+                            <button id="Onestar" class="rating-item btn-danger float-right" data-rate="1"></button>
+                        </div>
 
-                            </form>
-                    </div>
+                        <div class='align-center' id="videos">
+
+                        </div>
+
+                    </form>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    
-  
-                    <div class="card-body">
-                        <h5 class="card-title">Trailers</h5>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card">
 
-                        <form id="form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="search">
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" class="btn btn-danger" value="Search">
-                                </div>
 
-                                <div class='align-center' id="videos">
+                <div class="card-body">
+                    <h5 class="card-title">Trailers</h5>
 
-                                </div>
+                    <form id="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="search">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-danger" value="Search">
+                        </div>
 
-                            </form>
-                          
-                        
-                    </div>
+                        <div class='align-center' id="videos">
+
+                        </div>
+
+                    </form>
+
+
                 </div>
             </div>
         </div>
     </div>
-  
+</div>
+
 {{!-- trailers --}}
 
-{{!--         
+{{!--
 <div>
     <a>Favorite Movies</a>
     <ul>
@@ -121,20 +119,6 @@
     <img src="" alt="" id="searchPoster">
 </div> --}}
 
-        <div <a>Favorite Movies</a>
-            <ul>
-                {{#each favmovies as |favmovie|}}
-                <li>{{favmovie.movie_name}}</li>
-                <img src={{favmovie.movie_url}}>
-                {{/each}}
-            </ul>
-            <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
-            <button id="movieSearch">Search</button>
-            <button id="Onestar" class="rating-item" data-rate="1"></button>
-            <ul id="movieList"></ul>
-            <img src="" alt="" id="searchPoster">
-        </div>
-    </div>
-</div>
-</div>
 
+<ul id="movieList"></ul>
+<img src="" alt="" id="searchPoster">

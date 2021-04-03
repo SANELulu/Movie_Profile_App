@@ -34,8 +34,13 @@ router.delete('/:id', withAuth, async (req, res) => {
 
 router.post('/addfav', async (req, res) => {
     try {
-        console.log("added fav movie")
-        const newFavMovie = await favMovie.create(req.body);
+       
+        const newFavMovie = await favMovie.create( 
+            {
+            movie_name: req.body.movieName,
+            user_id: req.session.user_id,
+        }
+            );
         req.session.save(() => {
             res.status(200).json(newFavMovie);
             return res;
