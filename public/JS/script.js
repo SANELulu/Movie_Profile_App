@@ -23,15 +23,13 @@ const searchMovieFunction = async (e)=> {
     })
     const resultJson = await result.json()
     const movieResult = resultJson.results[0];
-    console.log(resultJson.results[0]);
+
    const movieListItem =  document.createElement('li')
    movieName = movieResult.original_title
    console.log(movieName)
    movieListItem.textContent = movieResult.original_title
    movieList.append(movieListItem);
-   console.log(moviePosterRoot)
-   moviePosterURL = moviePosterRoot + movieResult.poster_path;
-   console.log(moviePosterURL)
+   
    getMoviePoster();
    
 }
@@ -50,12 +48,11 @@ const movieSave = async (e) => {
     movieName = movieResult.original_title
     console.log(movieName)
     movieListItem.textContent = movieResult.original_title
-    console.log(moviePosterRoot)
     moviePosterURL = moviePosterRoot + movieResult.poster_path;
+    console.log(moviePosterURL)
+    
     addFavMovie();
-   
 }
-
 
     //saveMovie.addEventListener('click', movieSave);
 
@@ -63,24 +60,27 @@ const movieSave = async (e) => {
 
 
 const addFavMovie = async (event) => {
-console.log(moviePosterURL+"2")    
+    
+console.log(moviePosterURL);
+console.log("is hitting addFavMovie()")    
 const response = await fetch('/api/users/addfav', {
         method: 'POST',
-        body: JSON.stringify({movieName,moviePosterURL}),
+        body: JSON.stringify({ movieName }),
         headers: { 'Content-Type': 'application/json' },
 });
+
     if(response.status === 200){
         console.log('added')
-    } else console.log('failed')
-    
-    Toastify({
-        text: "Movie Saved",
-        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-        className: "Success Toast",
-        gravity: "top",
-        position: "center"
-      }).showToast();
-    
+
+        Toastify({
+            text: "Movie Saved to Favorites!",
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            className: "Success Toast",
+            gravity: "top",
+            position: "center"
+          }).showToast();
+
+    } else console.log('failed') 
 }
 
 
@@ -101,7 +101,7 @@ const getMoviePoster= async(event2) =>{
             
             let dataVariable = data.Poster;
                             
-                            console.log(dataVariable)
+                         
                     
                             document.getElementById('searchPoster').src=dataVariable;
                             
