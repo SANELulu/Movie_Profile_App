@@ -2,7 +2,7 @@ $(document).ready(function() {
   var API_KEY = "AIzaSyCwt4jc2BU4QM1PVfbFzQ9l-xRk7o8M27Q";
   var video = '';
 
-  $("#form").submit(function(event) {
+  $("#youtube-form").submit(function(event) {
       event.preventDefault();
       var search = $("#search").val();
 
@@ -18,7 +18,7 @@ $(document).ready(function() {
               <iframe width="560" height="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
               `;
               console.log(video)
-              $("#videos").append(video);
+              $("#youtube-videos").append(video);
           });
 
       });
