@@ -88,11 +88,11 @@ const response = await fetch('/api/users/addfav', {
 //http://www.omdbapi.com/?apikey=43a1230f&t=garfield
 
 
-const getMoviePoster= async(event2) =>{
+const getMoviePoster= async(event) =>{
     
     async function getMovie1(){
         const movieInput= document.getElementById('favmovieSearch').value 
-        let res = await fetch(`http://www.omdbapi.com/?apikey=43a1230f&t=${movieInput}`);
+        let res = await fetch(`https://www.omdbapi.com/?apikey=43a1230f&t=${movieInput}`);
         let data = await res.json()
         return data;
         }
@@ -101,12 +101,8 @@ const getMoviePoster= async(event2) =>{
             
             let dataVariable = data.Poster;
                             
-                         
-                    
                             document.getElementById('searchPoster').src=dataVariable;
-                            
-                          
-                         
+                                  
         })
         
 }
