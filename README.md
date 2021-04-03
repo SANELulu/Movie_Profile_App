@@ -48,7 +48,6 @@ When the user is logged in, the app will retrieve the individual user's data.
 * Contact Fidel Bello, Lucas Diaz, Robert Vanscoy, Francisco Ortega, Mike Gordillo with any questions at mikegordillotattoo@gmail.com
 
 ![screenshot](/public/assets/TheAppProject2.png)
-![screenshot](/public/assets/theProject(2).png
 ![screenshot](/public/assets/TheProject2.png)
 
 
