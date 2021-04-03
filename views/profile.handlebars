@@ -40,6 +40,7 @@
                 </div>
         </div>
 
+
     </div>
 
 <div class="container">
@@ -119,3 +120,21 @@
     <ul id="movieList"></ul>
     <img src="" alt="" id="searchPoster">
 </div> --}}
+
+        <div <a>Favorite Movies</a>
+            <ul>
+                {{#each favmovies as |favmovie|}}
+                <li>{{favmovie.movie_name}}</li>
+                <img src={{favmovie.movie_url}}>
+                {{/each}}
+            </ul>
+            <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
+            <button id="movieSearch">Search</button>
+            <button id="Onestar" class="rating-item" data-rate="1"></button>
+            <ul id="movieList"></ul>
+            <img src="" alt="" id="searchPoster">
+        </div>
+    </div>
+</div>
+</div>
+
