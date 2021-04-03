@@ -11,17 +11,17 @@
 ## User Story:
 
 As a User, I'd like to create a profile with a login.
-As a User, once I've created a profile I have access to a movies API that will allow me to search, add and review movies. I would also like for the app, to give me suggestions as to what to watch based on previous tastes and inquiries. As I watch, my profile will be updated.
-So that I may keep record of movies watched and ones I'd like to watch in the future.
+As a User, once I've created a profile I have access to a movies API that will allow me to search for movies of my interest. I would also like for the app, to give me suggestions as to what to watch based on my genreof choice. As I add movies, my profile will be updated.
+I can also add to a favorite movie list.
 
 ## Acceptance Criteria:
 When wanting to organize your favorite movies list, look up a trailer of your favorite movie, or one you haven't yet seen, the app will provide an easy experience for the user by helping them store their picks in a database, that will later be retreived when logged in and display in the user's profile.
 
-A movie fanatatic that wants to organize their favorite movie list, or perhaps would like to create a "to watch in the future list" can create a profile, in which their favorite movies picks will be stored. Fans can also watch trailers and rate their choices.
+A movie fanatatic that wants to organize their favorite movie list, or perhaps would like to create a "to watch in the future list" can create a profile, in which their favorite movies picks will be stored. Fans can also watch trailers and save their choices.
 
-Search for movies, watch trailers and store your ratings and picks on your profile.
+Search for movies, watch trailers and store your genre pick on your profile.
 
-When the user is logged in, the app will retrieve the individual user's data and display on profile.
+When the user is logged in, the app will retrieve the individual user's data.
 
 ## Table of contents:  
 * [Description](#description)
