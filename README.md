@@ -55,4 +55,9 @@ When the user is logged in, the app will retrieve the individual user's data.
 
 https://github.com/SANELulu/Movie_Profile_App
 
+
+https://floating-oasis-28235.herokuapp.com/profile
+
+
+
       
