@@ -47,7 +47,10 @@ When the user is logged in, the app will retrieve the individual user's data.
 ## Questions:
 * Contact Fidel Bello, Lucas Diaz, Robert Vanscoy, Francisco Ortega, Mike Gordillo with any questions at mikegordillotattoo@gmail.com
 
-![screenshot]()
+![screenshot](/public/assets/TheAppProject.png)
+![screenshot](/public/assets/TheAppProject2.png)
+![screenshot](/public/assets/TheProject2.png)
+
 
 https://github.com/SANELulu/Movie_Profile_App
 
