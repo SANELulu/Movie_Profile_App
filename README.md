@@ -1,7 +1,7 @@
 # My Movie DataBase
 ![License Badge](https://img.shields.io/static/v1?label=License&message=None&color=blue)
 
-![video]()
+![video](/public/assets/Project2App.gif)
 
         
 ## Name:Fidel Bello, Lucas Diaz, Robert Vanscoy, Francisco Ortega, Mike Gordillo
