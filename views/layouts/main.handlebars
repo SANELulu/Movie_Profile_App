@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie App</title>
+  <title>The Movie Database</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cyborg/bootstrap.min.css"
     integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -14,30 +14,29 @@
 
 </head>
 
-<body>
 
 
 
   <div class="flex-column justify-space-around">
-    <header class=" display-flex justify-space-between align-center p-2">
-      <h1>
+    <header class="display-flex justify-space-between align-center p-2">
+      
         <a href="/">
           <img src="./assets/mymdb.png" role="img" aria-label="logo" width="200" height="200"></img>
         </a>
-      </h1>
+        
+      
+      </header>
   </div>
+  
+
+<body>
 
 
-
-
-  </header>
   <main class="container container-fluid mt-5">
     <!-- Render the sub layout -->
     {{{ body }}}
   </main>
-  <footer>
-
-  </footer>
+ 
 
   <script src="JS/auth.js"></script>
   <script src="JS/genre.js"></script>

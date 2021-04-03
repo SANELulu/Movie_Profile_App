@@ -29,3 +29,15 @@
 .rating-item:hover~.rating-item::before {
     content: "\2605";
 }
+
+.divided {
+    display: flex;
+    align-items: center;
+  }
+  
+
+.divider {
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    margin: 5px
+  }
