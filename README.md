@@ -49,6 +49,8 @@ When the user is logged in, the app will retrieve the individual user's data.
 
 ![screenshot](/public/assets/TheAppProject2.png)
 ![screenshot](/public/assets/TheProject2.png)
+![screenshot](/public/assets/theProject(2).png)
+
 
 
 https://github.com/SANELulu/Movie_Profile_App
