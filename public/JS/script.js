@@ -5,7 +5,15 @@ const MOVIEAPI_KEY = 'acc9f3c5c9182124f176740523389662'
 const searchMovie = document.getElementById('movieSearch');
 //const saveMovie = document.getElementById('saveMovie');
 const movieList = document.getElementById('movieList');
+
+
+const addPosterButtom = document.getElementById('movieSearch');
+
 let movieName;
+let moviePosterRoot = "https://image.tmdb.org/t/p/w500/";
+let moviePosterURL;
+
+
 
 const searchMovieFunction = async (e)=> {
    e.preventDefault()
@@ -18,8 +26,13 @@ const searchMovieFunction = async (e)=> {
     console.log(resultJson.results[0]);
    const movieListItem =  document.createElement('li')
    movieName = movieResult.original_title
+   console.log(movieName)
    movieListItem.textContent = movieResult.original_title
    movieList.append(movieListItem);
+   console.log(moviePosterRoot)
+   moviePosterURL = moviePosterRoot + movieResult.poster_path;
+   console.log(moviePosterURL)
+   getMoviePoster();
    
 }
 
@@ -27,15 +40,19 @@ const searchMovieFunction = async (e)=> {
 const movieSave = async (e) => {
     e.preventDefault()
     const movieInput = document.getElementById('favmovieSearch').value
-    const result = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&query=${movieInput}&limit=1`, {
+    const result = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=acc9f3c5c9182124f176740523389662&query=${movieInput}&limit=1`, {
         method: 'GET',
     })
     const resultJson = await result.json()
     const movieResult = resultJson.results[0];
     console.log(resultJson.results[0].original_title);
-   movieListItem.textContent = movieResult.original_title
-   movieList.append(movieListItem);
-
+    const movieListItem =  document.createElement('li')
+    movieName = movieResult.original_title
+    console.log(movieName)
+    movieListItem.textContent = movieResult.original_title
+    console.log(moviePosterRoot)
+    moviePosterURL = moviePosterRoot + movieResult.poster_path;
+    addFavMovie();
    
 }
 
@@ -46,9 +63,10 @@ const movieSave = async (e) => {
 
 
 const addFavMovie = async (event) => {
+console.log(moviePosterURL+"2")    
 const response = await fetch('/api/users/addfav', {
         method: 'POST',
-        body: JSON.stringify({movieName}),
+        body: JSON.stringify({movieName,moviePosterURL}),
         headers: { 'Content-Type': 'application/json' },
 });
     if(response.status === 200){
@@ -64,15 +82,77 @@ const response = await fetch('/api/users/addfav', {
       }).showToast();
     
 }
+
+
+
+//http://www.omdbapi.com/?apikey=43a1230f&t=garfield
+
+
+const getMoviePoster= async(event2) =>{
+    
+    async function getMovie1(){
+        const movieInput= document.getElementById('favmovieSearch').value 
+        let res = await fetch(`http://www.omdbapi.com/?apikey=43a1230f&t=${movieInput}`);
+        let data = await res.json()
+        return data;
+        }
+        getMovie1()
+        .then(data=>{
+            
+            let dataVariable = data.Poster;
+                            
+                            console.log(dataVariable)
+                    
+                            document.getElementById('searchPoster').src=dataVariable;
+                            
+                          
+                         
+        })
+        
+}
+
 if (searchMovie){searchMovie.addEventListener('click', searchMovieFunction)}
 const oneStar = document.getElementById('Onestar')
-if (oneStar){oneStar.addEventListener('click', addFavMovie)}
+if (oneStar){oneStar.addEventListener('click', movieSave)}
+
 // addFavMovie();
 
+    // .then(data => {
 
+    // let dataVariable = data.results;
+    // // let dataParsed = JSON.parse(dataVariable);
+    // console.log(dataVariable)
 
+    // let dataArray = []
+    // let descriptionArray = []
 
+    // for (var i = 0; i < dataVariable.length-16; i++) {
+    //     dataArray.push(dataVariable[i].original_title)
+    //     descriptionArray.push(dataVariable[i].overview)
+    // }
 
+    // document.getElementById('movieTitle1').innerHTML= (dataArray[1]);
+    // document.getElementById('movieTitle2').innerHTML= (dataArray[2]);
+    // document.getElementById('movieTitle3').innerHTML= (dataArray[3]);
+
+    // document.getElementById('movieDescription1').innerHTML= (descriptionArray[1]);
+    // document.getElementById('movieDescription2').innerHTML= (descriptionArray[2]);
+    // document.getElementById('movieDescription3').innerHTML= (descriptionArray[3]);
+  
+
+    //     async function getPoster(){
+    //         let res = await fetch('https://omdbapi.com/?t='+  dataArray[1]  +'&apikey=43a1230f');
+    //         let omdbData = await res.json()
+    //         return omdbData;
+    //     }
+    //     getPoster()
+    //     .then(omdbData => {
+        
+    //         let posterVar1 =  omdbData.Poster;
+    //         document.getElementById('movie1').src=posterVar1
+    //         console.log(posterVar1)
+    //     })
+                   
 
 
 
