@@ -87,12 +87,9 @@ const logoutFormHandler = async () => {
     )
   };
 const loginRedirect = async () => {
-  // if(req.session.logged_in){
-  //   window.location.href = '/profile'
-  // }
-  // else(
+ 
     window.location.href = '/login'
-    // )
+    
   
 }
 

@@ -35,6 +35,8 @@ const movieSave = async (e) => {
     console.log(resultJson.results[0].original_title);
    movieListItem.textContent = movieResult.original_title
    movieList.append(movieListItem);
+
+   
 }
 
 
@@ -52,6 +54,14 @@ const response = await fetch('/api/users/addfav', {
     if(response.status === 200){
         console.log('added')
     } else console.log('failed')
+    
+    Toastify({
+        text: "Movie Saved",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        className: "Success Toast",
+        gravity: "top",
+        position: "center"
+      }).showToast();
     
 }
 if (searchMovie){searchMovie.addEventListener('click', searchMovieFunction)}

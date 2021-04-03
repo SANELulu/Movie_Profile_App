@@ -4,8 +4,21 @@
 
 <div class="row">
 
-    <h2>Welcome {{name}}</h2>
-    <p>Do you like : <span id="genreValue">{{topGenre}}</span> </p>
+    {{!-- <h2>Welcome {{name}}</h2>
+    <p>Do you like : <span id="genreValue">{{topGenre}}</span> </p> --}}
+
+    <div class="row mt-5">
+
+        <div class="card border-light mb-3" style="max-width: 20rem;">
+            <div class="card-header text-center">
+                <h4>Welcome, {{name}}</h4>
+            </div>
+            <div class="card-body">
+                <p>Favorite Genre : <span id="genreValue">{{topGenre}}</span> </p>
+            </div>
+
+        </div>
+    </div>
 
     <div>
         <p id="movieTitle1"></p>
@@ -19,9 +32,6 @@
         <img src="" alt="" id="movie2">
 
         <p id="movieDescription2"></p>
-
-
-
 
         <p id="movieTitle3"></p>
 
@@ -49,76 +59,8 @@
         <a>Profile</a>
 
     </div>
-    {{!-- watchlist --}}
-    <div class="col-3">
-        <a>Watchlist</a>
 
-        <div class="row mt-5">
-
-            <div class="card border-light mb-3" style="max-width: 20rem;">
-                <div class="card-header text-center">
-                    <h4>Welcome, {{name}}</h4>
-                </div>
-                <div class="card-body">
-                    <p>Favorite Genre : <span id="genreValue">{{topGenre}}</span> </p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card border-light mb-3" style="max-width: 20rem;">
-            <div class="card-header text-center">
-                <h4>Welcome, {{name}}</h4>
-            </div>
-            <div class="card-body">
-                <p>Favorite Genre : <span id="genreValue">{{topGenre}}</span> </p>
-            </div>
-
-
-        </div>
-    </div>
-
-
-    {{!-- watchlist --}}
-    <div class="col-3">
-        <a>Watchlist</a>
-    </div>
-    {{!-- reviews --}}
-
-    <div id="rater" class="col-3">
-        <a>Reviews/Ratings</a>
-        <ul class="rating">
-            <li id="star" class="rating-item" data-rate="1"></li>
-            <li id="star" class="rating-item" data-rate="2"></li>
-            <li id="star" class="rating-item" data-rate="3"></li>
-            <li id="star" class="rating-item" data-rate="4"></li>
-            <li id="star" class="rating-item" data-rate="5"></li>
-        </ul>
-
-
-        <script>
-            const container = document.querySelector('.rating');
-            const items = container.querySelectorAll('.rating-item')
-            container.onclick = e => {
-                const elClass = e.target.classList;
-                if (elClass.contains('active')) {
-                    items.forEach(
-                        item => item.classList.remove('active')
-                    );
-                    console.log(e.target.getAttribute("data-rate"));
-                }
-                else {
-                    items.forEach(
-                        item => item.classList.remove('active')
-                    );
-                    console.log(e.target.getAttribute("data-rate"));
-                    elClass.add('active');
-                }
-            };
-        </script>
-
-
-    </div>
+</div>
 </div>
 <br>
 <br>
@@ -144,73 +86,61 @@
             <button id="movieSearch">Search</button> <button id="saveMovie">Save</button>
             <ul id="movieList"></ul> --}}
 
-            </div>
-            <script></script>
         </div>
         <script></script>
+    </div>
+    <script></script>
 
 
-        {{!-- watchlist --}}
-        <div class="col-3">
-            <a>Watchlist</a>
-        </div>
-        {{!-- reviews --}}
+    {{!-- watchlist --}}
+    <div class="col-3">
+        <a>Watchlist</a>
+    </div>
 
-        <div id="rater" class="col-3">
-            <a>Reviews/Ratings</a>
-            <ul class="rating">
-                <li id="1star" class="rating-item" data-rate="1"></li>
-            </ul>
-        </div>
-        <br>
-        <br>
-        {{!-- trailers --}}
-        <div class="col-3">
+    <br>
+    <br>
+    {{!-- trailers --}}
+    <div class="col-3">
 
-            <a>Trailers</a>
-            <form id="form">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="search">
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-danger" value="Search">
-                </div>
-            </form>
+        <a>Trailers</a>
+        <form id="form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="search">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-danger" value="Search">
+            </div>
+        </form>
+        <div class="col-md-auto">
             <div class="col-md-auto">
-                <div class="col-md-auto">
-                    <div class='align-center' id="videos">
-                    </div>
+                <div class='align-center' id="videos">
+                </div>
 
-                    {{!-- <h1>Favorite movie</h1>
-                    <input type="text" class="form-control" id="movieSearchinput" placeholder="movie here">
-                    <button id="movieSearch">Search</button> <button id="saveMovie">
+                {{!-- <h1>Favorite movie</h1>
+                <input type="text" class="form-control" id="movieSearchinput" placeholder="movie here">
+                <button id="movieSearch">Search</button> <button id="saveMovie">
                     <ul id="movieList"></ul> --}}
 
-                </div>
-                <script></script>
-
-
             </div>
+            <script></script>
+
+
         </div>
     </div>
-    {{!-- fav movie --}}
-    <div>
-        <a>Favorite Movies</a>
-        <ul>
-           {{#each favmovies as |favmovie|}}
-           <li>{{favmovie.movie_name}}</li>
-         {{/each}}</ul>
-        <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
-        <button id="movieSearch">Search</button>
-         <button id="Onestar" class="rating-item" data-rate="1"></button>
-         <ul id="movieList"></ul>
-    </div>
 </div>
-
-
+{{!-- fav movie --}}
+<div>
+    <a>Favorite Movies</a>
+    <ul>
+        {{#each favmovies as |favmovie|}}
+        <li>{{favmovie.movie_name}}</li>
+        {{/each}}
+    </ul>
+    <input type="text" class="form-control" id="favmovieSearch" placeholder="Search Movie Here">
+    <button id="movieSearch">Search</button>
+    <button id="Onestar" class="rating-item" data-rate="1"></button>
+    <ul id="movieList"></ul>
 </div>
 </div>
-{{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="JS/youtube.js"></script>
-<script src="JS/genre.js"></script>
-<script src="JS/script.js"></script> --}}
+</div>
+</div>
