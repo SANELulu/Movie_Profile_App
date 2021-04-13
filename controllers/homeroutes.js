@@ -2,10 +2,9 @@ const router = require('express').Router();
 const {  User, favMovie } = require('../models');
 const withAuth = require('../utils/auth');
 console.log("homeRoutes.js hitting")
+
 router.get('/', (req, res) => {
-    res.render('homepage', {
-        loggedIn: req.session.loggedIn
-    })
+    res.render('homepage')
 });
 
 router.get( '/login', async (req, res)  => {
@@ -25,7 +24,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: {
-        model: favMovie
+        model: favMovie,
       }
       
     });

@@ -3,11 +3,12 @@ const favMovie = require('./favmovies');
 
 User.hasMany(favMovie, {
     foreignKey: 'user_id',
-    onDelete: 'Cascade'
+    onDelete: 'Cascade',
+
 });
 
 favMovie.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'movie_url'
 });
 
 module.exports = {User, favMovie};

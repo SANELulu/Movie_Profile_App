@@ -38,8 +38,9 @@ router.post('/addfav', async (req, res) => {
         const newFavMovie = await favMovie.create( 
             {
             movie_name: req.body.movieName,
+            movie_url: req.body.moviePosterURL,
             user_id: req.session.user_id,
-        }
+            }
             );
         req.session.save(() => {
             res.status(200).json(newFavMovie);
