@@ -65,7 +65,7 @@ console.log(moviePosterURL);
 console.log("is hitting addFavMovie()")    
 const response = await fetch('/api/users/addfav', {
         method: 'POST',
-        body: JSON.stringify({ movieName }),
+        body: JSON.stringify({ movieName , moviePosterURL}),
         headers: { 'Content-Type': 'application/json' },
 });
 

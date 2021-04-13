@@ -18,10 +18,14 @@ favMovie.init (
         },
         // issues with this -- need to fix
         
-        // movie_url: {
-        //     type: DataTypes.STRING,
-        //     allowNull: true,
-        // },
+        movie_url: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            references: {
+                model: 'user',
+                key: 'movie_url'
+            }
+        },
 
         user_id: {
             type: DataTypes.INTEGER,
